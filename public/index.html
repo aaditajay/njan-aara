@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ഞാൻ ആരാ — Discover Your Career Path</title>
+  <title>ഞാൻ ആരാ എട്ടാ — Discover Your Career Path</title>
   <meta name="description" content="A personalised career discovery tool for students in Kerala. Answer a few questions and find job roles that match who you are." />
+  <link rel="icon" type="image/svg+xml" href="icon/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -73,10 +74,48 @@
       padding: 2rem 1.25rem 4rem;
     }
 
+    /* ─── Header & Logo ─── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: opacity var(--transition);
+      cursor: pointer;
+    }
+
+    .logo:hover {
+      opacity: 0.9;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
     /* ─── Hero ─── */
     .hero {
       text-align: center;
-      padding: 1.5rem 0 2rem;
+      padding: 0.5rem 0 1.5rem;
     }
 
     .hero-badge {
@@ -98,20 +137,6 @@
     .hero-badge::before {
       content: '✦';
       font-size: 10px;
-    }
-
-    .hero-title {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 40px;
-      font-weight: 400;
-      color: var(--text);
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--primary);
     }
 
     .hero-sub {
@@ -558,7 +583,6 @@
     @media (max-width: 480px) {
       .page-wrapper { padding: 1rem 1rem 3rem; }
       .card { padding: 1.5rem 1.25rem; }
-      .hero-title { font-size: 32px; }
       .step-q { font-size: 20px; }
       .chip { padding: 8px 14px; font-size: 13px; }
     }
@@ -567,10 +591,17 @@
 <body>
   <div class="page-wrapper">
 
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="icon/icon.svg" alt="ഞാൻ ആരാ എട്ടാ Logo" class="logo-icon" />
+        <span class="logo-text">ഞാൻ ആരാ എട്ടാ?</span>
+      </div>
+    </header>
+
     <!-- Hero -->
     <div class="hero" id="hero-section">
       <div class="hero-badge">Career Discovery</div>
-      <h1 class="hero-title">ഞാൻ ആരാ? <em>Who Am I?</em></h1>
       <p class="hero-sub">Answer a few simple questions and we'll find career paths that truly match who you are.</p>
     </div>
 
